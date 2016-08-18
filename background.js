@@ -9,7 +9,7 @@ chrome.tabs.onUpdated.addListener( function( tabId,  changeInfo,  tab) {
               if (result['recent_url'] != tab.url && changeInfo.status == "complete") {
                      chrome.storage.sync.set({'recent_url': [tab.url]});
                      if( /^https:\/\/www.reddit.com\/r\//.test(tab.url)) {
-                            var sub = tab.url.match(/(?:\/r\/)(.+?)(?:\/|$)/)[1];
+                            var sub = tab.url.match(/(?:\/r\/)(.+?)(?:\/|$|#)/)[1];
                             var date = new Date();
                             date_str = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
                             chrome.storage.sync.get(sub, function(result) {

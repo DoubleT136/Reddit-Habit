@@ -3,7 +3,7 @@
 
   "name": "Reddit Habit",
   "description": "This extension tracks how often you visit each subreddit",
-  "version": "1.0",
+  "version": "1.1",
 
   "icons": {
       "128": "icon.png"
